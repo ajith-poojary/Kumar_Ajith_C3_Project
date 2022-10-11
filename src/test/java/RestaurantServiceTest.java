@@ -70,10 +70,6 @@ class RestaurantServiceTest {
     @Test
     public void Total_order_cost_must_be_388_when_Sweetcornsoup_And_Vegetable_lasagne_are_added_into_menu()
     {
-
-
         assertEquals(restaurant.getTotalOrderValue(Arrays.asList("Sweet corn soup", "Vegetable lasagne")), 388);
-
-
     }
 }

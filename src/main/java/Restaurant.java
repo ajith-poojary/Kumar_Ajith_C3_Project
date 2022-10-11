@@ -71,7 +71,12 @@ public class Restaurant {
     }
 
     public int getTotalOrderValue(List<String> orderedItems){
-        return  1;
+        int sumOfOrderCost=0;
+       for(String item:orderedItems)
+       {
+           sumOfOrderCost=sumOfOrderCost+findItemByName(item).getPrice();
+       }
+       return sumOfOrderCost;
 
     }
 
