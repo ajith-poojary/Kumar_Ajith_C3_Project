@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.*;
 
 import java.time.LocalTime;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -65,4 +67,13 @@ class RestaurantServiceTest {
         assertEquals(initialNumberOfRestaurants + 1,service.getRestaurants().size());
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void Total_order_cost_must_be_388_when_Sweetcornsoup_And_Vegetable_lasagne_are_added_into_menu()
+    {
+
+
+        assertEquals(restaurant.getTotalOrderValue(Arrays.asList("Sweet corn soup", "Vegetable lasagne")), 388);
+
+
+    }
 }
